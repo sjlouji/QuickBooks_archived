@@ -1,0 +1,15 @@
+{
+    "environment": "development",
+    "port": {
+        "BOOKS_PORT": "8000"
+    },
+    "mongo": {
+        "BOOKSDATABASEURL": "mongodb://localhost/db_books_development"
+    },
+    "SENDGRIDKEY": "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",
+    "JWT_SECRET": {
+        "authToken": "helloworldthisisjoanloujideveloperofnextbooks",
+        "resetToken": "helloworldthisisjoanloujideveloperofnextbookspasswordresetview"
+    },
+    "CLIENT_URL": "http://localhost:3000"
+}
