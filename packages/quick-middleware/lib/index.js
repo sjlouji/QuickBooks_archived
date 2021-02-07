@@ -1,3 +1,4 @@
 module.exports = {
-    auth: require('./permissions')
+    auth: require('./permissions'),
+    httpContext: require('./http-context'),
 };

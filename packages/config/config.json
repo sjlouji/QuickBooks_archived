@@ -11,5 +11,11 @@
         "authToken": "helloworldthisisjoanloujideveloperofnextbooks",
         "resetToken": "helloworldthisisjoanloujideveloperofnextbookspasswordresetview"
     },
-    "CLIENT_URL": "http://localhost:3000"
+    "CLIENT_URL": "http://localhost:3000",
+    "loggly" :{
+        "isEnabled":true,
+        "domain": "quickbooks",
+        "token": "e8a2d2c8-a460-419c-a324-810329a7abde",
+        "tag": ["Winston-NodeJS"]
+      }
 }
