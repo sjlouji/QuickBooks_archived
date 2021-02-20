@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { AccountTable } from './Components/AccountTable'
 
 export class AccountsPage extends Component {
 
@@ -6,6 +7,7 @@ export class AccountsPage extends Component {
         return(
             <div>
                 AccountsPage
+                <AccountTable />
             </div>
         );
     }
