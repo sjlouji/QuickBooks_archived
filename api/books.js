@@ -26,7 +26,6 @@ app.use(cors())
 
 //Routes
 app.use('',router)
-
 app.listen(config.port.BOOKS_PORT,()=>{
   console.log(`Serve is up and running at the port ${config.port.BOOKS_PORT}`)
 })
