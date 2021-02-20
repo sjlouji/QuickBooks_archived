@@ -1,6 +1,6 @@
 const cls = require('cls-hooked');
 
-const nameSpaceKey = 'pando_tms';
+const nameSpaceKey = 'books';
 
 function middleware(req, res, next) {
   const ns = cls.getNamespace(nameSpaceKey) || cls.createNamespace(nameSpaceKey);
@@ -8,7 +8,7 @@ function middleware(req, res, next) {
 }
 
 function get(key) {
-  const ns = cls.getNamespace(nameSpaceKey);
+  const ns = cls.getNamespace(nameSpaceKey) || cls.createNamespace(nameSpaceKey);
   if (ns && ns.active) {
     return ns.get(key);
   }
