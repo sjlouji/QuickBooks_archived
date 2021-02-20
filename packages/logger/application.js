@@ -65,7 +65,8 @@ function applicationLogger(namespace) {
 
   // Wrap Winston logger to print reqId in each log
   const formatMessage = (message) => {
-    const reqId = httpContext.get('requestId');
+    const reqId = httpContext.get('books');
+    console.log('message',message.body)
     message = reqId ? `${reqId} - ${message}` : message;
     return message;
   };

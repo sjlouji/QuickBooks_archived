@@ -20,7 +20,8 @@ mongoose.connection.once('open',function(){
 
 // Express
 app.use(bodyParser.json())
-app.use(morgan('combined',))
+morgan.token('body', (req, res) => JSON.stringify(req.body));
+app.use(morgan(':method :url :status :response-time ms - :res[content-length] :body - :req[content-length]'));
 app.use(cors())
 
 //Routes
