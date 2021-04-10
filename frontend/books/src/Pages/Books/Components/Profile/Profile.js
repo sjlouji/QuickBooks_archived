@@ -28,7 +28,7 @@ export class Profile extends React.Component {
                 <div class="dropdown-body">
                     <ul class="profile-nav p-0 pt-3">
                     <li class="nav-item">
-                        <a href="/profile" class="nav-link">
+                        <a onClick={()=> this.props.nav.push('/profile')} class="nav-link">
                             <i data-feather="user"></i>
                             <span>Profile</span>
                         </a>

@@ -50,6 +50,13 @@ export class Security extends Component {
 
     //  Fired when the component recieves new props
     componentWillReceiveProps(nextProps){
+        if(nextProps.error !== undefined){
+            if(nextProps.error.message === 'Network Error'){
+                message.error(nextProps.error.message)
+            }else{
+                message.error(nextProps.error.response.data.error)
+            }
+        }
         if(nextProps.auth.msg === 'Successfull'){
             message.success('Password Changed Successfully')
             this.setState({visible: false})
@@ -136,7 +143,8 @@ export class Security extends Component {
 const mapStateToProps = (state) => ({
     isAuthenticated: state.auth.isAuthenticated,
     isLoading: state.auth.isLoading,
-    auth: state.auth.user
+    auth: state.auth.user,
+    error: state.auth.error
   });
   
 

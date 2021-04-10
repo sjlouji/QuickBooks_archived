@@ -6,7 +6,11 @@ export class AccountsPage extends Component {
     render() {
         return(
             <div>
-                AccountsPage
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">Accounts</li>
+                    </ol>
+                </nav>
                 <AccountTable />
             </div>
         );

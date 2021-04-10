@@ -198,6 +198,7 @@ export const deactivateUser = () => (dispatch,getState) => {
 export const passwordChangeUI = (password) => (dispatch,getState) => {
   // Request Body
   const body = JSON.stringify({ password });
+  console.log(tokenConfig(getState))
   api
     .put('/auth/passwordChange', body ,tokenConfig(getState))
     .then((res) => {
